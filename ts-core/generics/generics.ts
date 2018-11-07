@@ -1,42 +1,42 @@
 class Person {
-  name: string;
-  age: number;
+	name!: string;
+	age!: number;
 }
 
 class Vehicle {
-  brand: string;
-  model: string;
-  year: number;
-  color: string;
-  owner: string;
+	brand!: string;
+	model!: string;
+	year!: number;
+	color!: string;
+	owner!: string;
 }
 
 class Parser<T> {
-  fields: Array<string>;
-  targetClass: {new(): T;};
+	fields: Array<string>;
+	targetClass: { new(): T; };
 
-  constructor(c: {new(): T; }, fields: Array<string>) {
-    this.targetClass = c;
-    this.fields = fields;
-  }
+	constructor(c: { new(): T; }, fields: Array<string>) {
+		this.targetClass = c;
+		this.fields = fields;
+	}
 
-  parse(data): Array<T> {
-    var result: Array<T> = [];
-    var lines = data.split("\n");
+	parse(data: any): Array<T> {
+		var result: Array<T> = [];
+		var lines = data.split("\n");
 
-    return lines.map(line => {
-      var object = new this.targetClass();
-      var values = line.split(",");
+		return lines.map((line: any) => {
+			var object = new this.targetClass();
+			var values = line.split(",");
 
-      this.fields.forEach((field, i) => {
-        object[field] = values[i];
-      });
+			this.fields.forEach((field: string, i) => {
+				object[field] = values[i];
+			});
 
-      return object;
-    });
+			return object;
+		});
 
-    return result;
-  }
+		return result;
+	}
 }
 
 var personData = `John,36
@@ -56,7 +56,7 @@ Volkswagen,New Beatle,2007,Yellow,Alicia Keys
 Mitsubishi,Eclipse,1998,Red,Joss Stone`;
 
 var vehicleParser = new Parser<Vehicle>(
-  Vehicle, ['brand', 'model', 'year', 'color', 'owner']);
+	Vehicle, ['brand', 'model', 'year', 'color', 'owner']);
 var vehicles = vehicleParser.parse(vehicleData);
 
 console.log("*** Vehicle list:")
