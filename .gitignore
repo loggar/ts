@@ -9,8 +9,8 @@ npm-debug.log*
 .lock-wscript
 
 # dependency directories
-node_modules
-jspm_packages
+node_modules/
+jspm_packages/
 
 # optional npm cache directory
 .npm
@@ -38,10 +38,10 @@ Thumbs.db
 **/e2e/**/*.js.map
 
 # compiled output
-dist
-tmp
-out-tsc
-build
+dist/
+tmp/
+out-tsc/
+build/
 
 # test
 _test-output/
@@ -55,3 +55,6 @@ _tmp/
 
 # visual studio code
 .vscode/
+
+# ssl
+ssl/
