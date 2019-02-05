@@ -6,11 +6,11 @@ var Ns;
     Ns.x = 'x in Ns';
 })(Ns || (Ns = {}));
 console.log('Ns=' + JSON.stringify(Ns));
-var Cl = (function () {
+var Cl = /** @class */ (function () {
     function Cl() {
         this.x = "str"; // instance member
     }
-    Cl.x = 1; // static member
+    Cl.x = 1; // static menber
     return Cl;
 }());
 console.log('Cl.x=' + Cl.x);

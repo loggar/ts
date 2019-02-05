@@ -1,5 +1,5 @@
 "use strict";
-var Startup = (function () {
+var Startup = /** @class */ (function () {
     function Startup() {
     }
     Startup.main = function () {
