@@ -42,6 +42,7 @@ dist/
 tmp/
 out-tsc/
 build/
+out/
 
 # test
 _test-output/

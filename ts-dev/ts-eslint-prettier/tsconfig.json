@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "target": "es2018",
+        "outDir": "./out",
+        "baseUrl": "./src"
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+}
