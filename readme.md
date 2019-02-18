@@ -10,11 +10,15 @@ Build to js
 $ ./node-modules/.bin/tsc <filename.ts>
 # or
 $ npx tsc <filename.ts>
+```
 
+Run output
+
+```
 $ node <filename.js>
 ```
 
-Run Typescript via ts-node
+Run Typescript with ts-node
 
 ```
 $ npm install -D ts-node
