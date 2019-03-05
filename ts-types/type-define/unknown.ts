@@ -1,4 +1,4 @@
-const double = (input: unknown) => {
+const fnDouble = (input: unknown) => {
   if (typeof input === 'string') {
     return input + ' - ' + input;
   }
@@ -8,6 +8,6 @@ const double = (input: unknown) => {
   return input;
 };
 
-const result = double('foo'); // ok
+const result = fnDouble('foo'); // ok
 
 console.log(result);

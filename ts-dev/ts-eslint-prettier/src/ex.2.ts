@@ -4,12 +4,12 @@ type Color = 'red' | 'orange';
 type FruitEater = (fruit: Fruit) => number; // eats and ranks the fruit
 type ColorConsumer = (color: Color) => string; // consumes and describes the colors
 
-declare let f: FruitEater | ColorConsumer;
+declare let fruitOrColor: FruitEater | ColorConsumer;
 
-var a = f('orange'); // It works! Returns a 'number | string'.
+var a1 = fruitOrColor('orange'); // It works! Returns a 'number | string'.
 
-// f('apple'); // error - Argument of type '"red"' is not assignable to parameter of type '"orange"'.
+// fruitOrColor('apple'); // error - Argument of type '"red"' is not assignable to parameter of type '"orange"'.
 
-// f('red'); // error - Argument of type '"red"' is not assignable to parameter of type '"orange"'.
+// fruitOrColor('red'); // error - Argument of type '"red"' is not assignable to parameter of type '"orange"'.
 
-console.log(a);
+console.log(a1);
