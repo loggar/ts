@@ -1,6 +1,6 @@
 class Student {
-  firstName: String;
-  lastName: String;
+  firstName: string;
+  lastName: string;
   studentId: number;
 
   constructor(firstName: string, lastName: string) {
