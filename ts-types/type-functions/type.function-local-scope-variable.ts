@@ -6,7 +6,7 @@ type MergePropertyValue<
   _BPropValue = B[Prop]
 > = _APropValue | _BPropValue; // local variable // sum type
 
-// JS🟨 take a look at similar JS function but working at assumed number fields
+// JS take a look at similar JS function but working at assumed number fields
 function mergePropertyValue(a, b, prop) {
   const _aPropValue = a[prop];
   const _bPropValue = b[prop];
